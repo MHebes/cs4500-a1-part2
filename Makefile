@@ -6,8 +6,8 @@ headers = \
 		  list.h \
 		  map.h
 
-main: test.cpp $(headers)
-	g++ -g -Wall -o test test.cpp
+main: test-map.cpp $(headers)
+	g++ -g -Wall -o test test-map.cpp
 
 clean:
 	rm test
