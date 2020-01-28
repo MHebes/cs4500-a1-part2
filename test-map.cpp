@@ -29,6 +29,20 @@ void test_clone() {
     map1.put(c1, d1);
 
     Map* map2 = map1.clone();
+    List* keys1 = map1.keys();
+    List* keys2 = map2->keys();
+    List* vals1 = map1.values();
+    List* vals2 = map2->values();
+
+    assert(keys1->size() == keys2->size());
+    assert(keys1->size() == vals1->size());
+    assert(vals1->size() == vals2->size());
+
+    for (size_t i = 0; i < keys1->size(); i++) {
+        assert(keys1->get(i) == keys2->get(i));
+        assert(vals1->get(i) == vals2->get(i));
+    }
+
     assert(map1.equals(map2));
 
     map2->put(c2, a2);  // replace c1
