@@ -1,4 +1,8 @@
+//lang::CwC
+#pragma once
+
 #include "object.h"
+#include "list.h"
 
 // Represents a mapping from Objects to Objects based on their hashcodes. Much
 // of the interface comes from Java's HashMap.
