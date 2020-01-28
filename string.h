@@ -1,33 +1,49 @@
-// lang::CwC
+//lang::CwC
 #pragma once
 
-#include <string.h>
-
 #include "object.h"
+#include <cstdlib>
+#include <cstring>
+#include <cstdio> 
 
-// Represents a string of characters. Essentially a char vector
+/**
+ * An immutable String class representing a char*
+ * author: chasebish */
 class String : public Object {
 public:
-    // Make a new string based on str
-    String(const char* str) {}
+  /** CONSTRUCTORS & DESTRUCTORS **/
 
-    // Make an empty string
-    String() : Object() {}
+  /* Creates a String copying s */
+  String(const char* s);
 
-    // Free char array
-    ~String() {}
+  /* Copies a String copying the value from s */
+  String(String* const s);
 
-    void print() {}
+  /* Clears String from memory */
+  ~String();
 
-    String* clone() { return nullptr; }
 
-    bool equals(Object* other) { return false; }
+  /** INHERITED METHODS **/
 
-    size_t hash() { return 0; }
+  /* Inherited from Object, generates a hash for a String */
+  size_t hash();
 
-    int compare(String* other) { return 0; }
+  /* Inherited from Object, checks equality between an String and an Object */
+  bool equals(Object* const obj);
 
-    size_t length() { return 0; }
 
-    String* concat(String* other) { return nullptr; }
+  /** STRING METHODS **/
+  
+  /** Compares strings based on alphabetical order
+   * < 0 -> this String is less than String s
+   * = 0 -> this String is equal to String s
+   * > 0 -> this String is greater than String s
+   */
+  int cmp(String* const s);
+
+  /* Creates a new String by combining two existing Strings */
+  String* concat(String* const s);
+
+  /* Returns the current length of the String */
+  size_t size();
 };
