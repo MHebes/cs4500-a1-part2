@@ -55,18 +55,3 @@ public:
     void clear() {}
 };
 
-// A sorted list of Objects
-class SortedList : public List {
-public:
-    // default constructor only
-
-    // Inserts e before the first element which it comes before alphabetically
-    void sorted_add(Object* e) {}
-
-    // Override. Overriding this because the spec doesn't offer any polymorphism
-    // otherwise :)
-    virtual void push_back(Object* e) { sorted_add(e); }
-
-    // Ignores the index because the spec requires it :(
-    virtual void add_all(size_t i, List* c) {}
-};
