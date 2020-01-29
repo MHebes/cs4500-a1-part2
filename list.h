@@ -9,10 +9,10 @@
 // A list of strings
 class List : public Object {
 public:
-    // Initializes vector with size 1 initially to avoid first allocation
+    // Initializes list
     List() {}
 
-    // Frees vector and Objects within it
+    // Frees list and objects within it
     ~List() {}
 
     // Override. Outputs elements of the list with ", " inserted between them
