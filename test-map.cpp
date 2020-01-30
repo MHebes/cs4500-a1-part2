@@ -57,6 +57,10 @@ void test_clone() {
     delete d1;
     delete d2;
     delete map2;
+    delete keys1;
+    delete keys2;
+    delete vals1;
+    delete vals2;
 }
 
 // equals
