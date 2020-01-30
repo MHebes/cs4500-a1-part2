@@ -6,7 +6,12 @@
 
 #include "object.h"
 
-// A list of strings
+/**
+ * A list of strings. This is a basic container object for the purposes of
+ * testing. NOTE: Ideally this would be made obselete by a more fully-featured
+ * Array class. However, due to the nature of Assignment 2, I cannot do that
+ * well. - Mike
+ */
 class List : public Object {
 public:
     // Initializes list
@@ -14,16 +19,6 @@ public:
 
     // Frees list and objects within it
     ~List();
-
-    // Override. Outputs elements of the list with ", " inserted between them
-    void print();
-
-    // Override. Checks if all elements of this list match all elements of a
-    // given List
-    bool equals(Object* o);
-
-    // Override.
-    size_t hash();
 
     // Returns length of list
     size_t size();
@@ -34,24 +29,6 @@ public:
     // Return index of given Object, or size() + 1 if it doesn't exist
     size_t index_of(Object* o);
 
-    // Adds an element to the end of the list
-    virtual void push_back(Object* str);
-
-    // Removes the element at index i and returns it. Shifts other elements
-    // after i
-    Object* remove(size_t i);
-
-    // Replaces the element at index i with e
-    Object* set(size_t i, Object* e);
-
-    // Insert e at index i
-    void add(size_t i, Object* e);
-
-    // Add all elements from c into the list starting at index i. Existing
-    // elements after i are shifted
-    virtual void add_all(size_t i, List* c);
-
-    // Empty the list
-    void clear();
+    /* Additional interface: anything inherited from Object */
 };
 
