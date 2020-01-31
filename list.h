@@ -1,9 +1,6 @@
 // lang::CwC
 #pragma once
 
-#include <assert.h>
-#include <stdint.h>
-
 #include "object.h"
 
 /**
@@ -13,22 +10,21 @@
  * well. - Mike
  */
 class List : public Object {
-public:
-    // Initializes list
-    List();
+ public:
+  // Initializes list
+  List();
 
-    // Frees list and objects within it
-    ~List();
+  // Frees list and objects within it
+  ~List();
 
-    // Returns length of list
-    size_t size();
+  // Returns length of list
+  size_t size();
 
-    // Return a copy of the Object at index i
-    Object* get(size_t index);
+  // Return a copy of the Object at index i
+  Object* get(size_t index);
 
-    // Return index of given Object, or size() + 1 if it doesn't exist
-    size_t index_of(Object* o);
+  // Return index of given Object, or size() + 1 if it doesn't exist
+  size_t index_of(Object* o);
 
-    /* Additional interface: anything inherited from Object */
+  /* Additional interface: anything inherited from Object */
 };
-

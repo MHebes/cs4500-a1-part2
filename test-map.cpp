@@ -1,4 +1,5 @@
-#include <assert.h>
+// lang::Cpp
+#include <cassert>
 
 #include "list.h"
 #include "map.h"

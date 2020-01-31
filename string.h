@@ -1,16 +1,13 @@
-//lang::CwC
+// lang::CwC
 #pragma once
 
 #include "object.h"
-#include <cstdlib>
-#include <cstring>
-#include <cstdio> 
 
 /**
  * An immutable String class representing a char*
  * author: chasebish */
 class String : public Object {
-public:
+ public:
   /** CONSTRUCTORS & DESTRUCTORS **/
 
   /* Creates a String copying s */
@@ -22,7 +19,6 @@ public:
   /* Clears String from memory */
   ~String();
 
-
   /** INHERITED METHODS **/
 
   /* Inherited from Object, generates a hash for a String */
@@ -31,9 +27,8 @@ public:
   /* Inherited from Object, checks equality between an String and an Object */
   bool equals(Object* const obj);
 
-
   /** STRING METHODS **/
-  
+
   /** Compares strings based on alphabetical order
    * < 0 -> this String is less than String s
    * = 0 -> this String is equal to String s
