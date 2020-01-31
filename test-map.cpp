@@ -376,12 +376,12 @@ void test_keys_and_values() {
   assert((keys->index_of(a1) < keys->size()));
   assert(!(keys->index_of(b1) < keys->size()));
   assert((keys->index_of(c1) < keys->size()));
-  assert(!(keys->index_of(d1) < keys->size()));
+  assert((keys->index_of(d1) < keys->size()));
 
   assert((values->index_of(a1) < values->size()));
   assert((values->index_of(b1) < values->size()));
   assert(!(values->index_of(c1) < values->size()));
-  assert(!(values->index_of(d1) < values->size()));
+  assert((values->index_of(d1) < values->size()));
 
   delete a1;
   delete b1;
